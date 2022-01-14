@@ -8,7 +8,8 @@
     "test": "hardhat test",
     "deploy:local": "hardhat run --network localhost scripts/deploy.js",
     "deploy:rinkeby": "hardhat run --network rinkeby scripts/deploy.js",
-    "local-testnet": "hardhat node"
+    "local-testnet": "hardhat node",
+    "verify": "npx hardhat verify --contract contracts/BaseErc20.sol:BaseErc20 --network rinkeby CONTRACT_ADDRESS_GOES_HERE \"Test Name\", \"TSN\", 100"
   },
   "keywords": [],
   "author": "",
