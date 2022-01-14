@@ -1,15 +1,6 @@
-# Basic Sample Hardhat Project
+# Encode Bootcamp Team Project
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+This project holds a base ERC20 implementation that gets used in a seperate React UI to allow creating and deploying of custom ERC20 contracts based on the users input.
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
+## Deploying to Rinkeby
+You will need to add a json file named secret.json.  See the example-secret.json for the exact key names that need to be used.  The Etherscan API key is only needed if you want to verify your contract.
