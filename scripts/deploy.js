@@ -14,12 +14,19 @@ async function main() {
   // await hre.run('compile');
 
   // We get the contract to deploy
-  const BaseErc20 = await hre.ethers.getContractFactory("BaseErc20");
-  const baseErc20 = await BaseErc20.deploy("Test Name", "TSN", 100);
+  // const BaseErc20 = await hre.ethers.getContractFactory("BaseErc20");
+  // const baseErc20 = await BaseErc20.deploy("Test Name", "TSN", 100);
 
-  await baseErc20.deployed();
+  // await baseErc20.deployed();
 
-  console.log("Base deployed to:", baseErc20.address);
+  // console.log("Base deployed to:", baseErc20.address);
+
+  const BaseErc721 = await hre.ethers.getContractFactory("BaseErc721");
+  const baseErc721 = await BaseErc721.deploy("Test NFT", "TNFT", "https://bafybeihmqe6rnm63lxnz2uoiubzcwlrpumpervmxut6yl34erlfhghhdjy.ipfs.infura-ipfs.io/", "0x05416460deb76d57af601be17e777b93592d8d4d4a4096c57876a91c84f4a712");
+
+  await baseErc721.deployed();
+
+  console.log("Base deployed to:", baseErc721.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
